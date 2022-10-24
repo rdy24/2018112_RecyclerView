@@ -1,6 +1,7 @@
 package com.example.recycleview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -17,6 +18,7 @@ public class MovieDetailActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     setContentView(R.layout.activity_movie_detail);
     image = findViewById(R.id.image_logo);
     title = findViewById(R.id.tv_title);
@@ -35,5 +37,9 @@ public class MovieDetailActivity extends AppCompatActivity {
       getSupportActionBar().setTitle("Movie Detail");
       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+  }
+  public boolean onSupportNavigateUp() {
+    finish();
+    return true;
   }
 }
