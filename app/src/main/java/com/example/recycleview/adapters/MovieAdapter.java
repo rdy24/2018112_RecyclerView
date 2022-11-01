@@ -65,7 +65,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     return (movieList != null) ? movieList.size() : 0;
   }
 
-  public class MyViewHolder extends RecyclerView.ViewHolder {
+  public static class MyViewHolder extends RecyclerView.ViewHolder {
     public TextView movieName, movieGenre, movieDescription;
     public ImageView movieImage;
     public MyViewHolder(@NonNull ViewGroup parent) {
